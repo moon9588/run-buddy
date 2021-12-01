@@ -56,9 +56,7 @@ footer h2{
   margin: 0;
 }
 footer div{
-  
   line-height: 1.5;
-  text-align: ;
 }
 
 footer a{
@@ -129,10 +127,10 @@ footer a{
   width: 80%;
   font-size: 20px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .steps{
-  text-align: center;
   background:#fce138;
 }
 
@@ -146,13 +144,29 @@ footer a{
   border-color: #39a6b2
 }
 
+.step {
+  margin: 50px auto;
+  padding-bottom: 50px;
+  width: 80%;
+  border-bottom: 1px solid #39a6b2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step-img{
+  flex: 1 12%;
+  margin-right: 20px;
+}
 .section-title {
   font-size: 55px;
   color: #024e76;
-  margin-bottom: 35px;
-  padding: 0 100px 20px 100px;
-  display: inline-block;
   border-bottom: 3px solid;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 0 auto 35px auto;
+  width: 50%
 }
 
 .primary-border {
@@ -170,38 +184,38 @@ footer a{
   border-color: #39a6b2;
 }
 
-.steps div{
-  margin: bottom 80px;
-}
 
-.steps img{
-  width: 15%;
-  margin: 10px 0;
-}
-
-.steps h3{
+.step h3{
   color: #024e76;
   font-size: 46px;
-  margin-top: 10px;
+  flex: 1 30%;
 }
 
-.steps p{
+.step-text p{
   color: #39a6b2;
-  font-size: 23px;
+  font-size: 18px;
 }
-.steps span{
-  font-size: 38px;
+.step-text{
+  flex: 12;
+}
+.step-img img{
+  max-width: 100%;
+}
+
+.step-info { 
+  flex: 2 70%;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.step-text h4{
+  font-size: 26px;
+  line-height: 1.5;
+  color:#024e76;
 }
 
 
-.intro {
-  text-align: center;
-}
-
-
-.trainers {
-  text-align: center;
-}
 
 .trainer{
   width: 900px;
@@ -222,9 +236,6 @@ footer a{
   width: 65%
 }
 
-.text-left{
-  text-align: left;
-}
 
 .text-right{
   text-align: right;
@@ -244,7 +255,6 @@ footer a{
   font-size: 17px;
   line-height: 1.3;
 }
-
 
 
  /* REACH OUT STYLES START */
@@ -303,4 +313,8 @@ footer a{
   font-style: italic;
   font-size: 55px;
   color:#fce138;
+}
+
+.flex-row {
+  display: flex;
 }
