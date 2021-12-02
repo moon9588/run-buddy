@@ -5,17 +5,28 @@ body{
 }
 
 /* apply styles to <header> */
+
 header{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   display:flex;
   padding: 20px 35px;
   background-color: #39a6b2;
+  background-image: url("/Users/mamona/Desktop/projects/run-buddy/assets/images/hero-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
 }
+
 header h1 {
   font-weight:bold;
   font-size: 36px;
   color: #fce138;
   margin: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   
 }
 header a {
@@ -34,10 +45,11 @@ header nav ul {
   list-style: none;
 }
 
-header nav ul li a{
+header nav ul li a:hover{
   margin: 0 30px;
   font-weight: lighter;
   font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 *{
   margin: 0;
@@ -76,11 +88,13 @@ footer a{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background-attachment: fixed;
+  background-position: 80%;
  
 }
 /*hero style end*/
-.hero-form{
-  background-color: #fce138;
+.hero-form {
+  background-color: rgb(252,225,56, 0.8) ;
   padding:20px;
   color:#024e76;
   border-style: solid;
@@ -88,7 +102,10 @@ footer a{
   border-color: #024e76;
   width: 40%;
   margin: 3.5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
 }
+
 .hero-form p{
   margin: 5px 0 15px 0;
 }
@@ -103,17 +120,20 @@ footer a{
   color: #024e76;
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 10px;
 }
 
 .hero-form label{
   margin: 0 5px
 }
-.hero-from button{
+.hero-from button:hover{
   color:#fce138;
   background-color: #024e76;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 10px;
+
 }
 /*hero styles end*/
 
@@ -143,16 +163,21 @@ footer a{
   border-bottom: 3px solid;
   border-color: #39a6b2
 }
-
+.step:nth-child(even) {
+  border-bottom: 1px solid #39a6b2;
+}
+.step:not(:last-child) {
+  border-bottom: 1px solid #39a6b2;
+}
 .step {
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #39a6b2;
 }
 
 .step-img{
@@ -298,6 +323,7 @@ footer a{
   line-height: 1.5;
   font-size: 16px;
   font-style: normal;
+
 }
 .contact-form input, .contact-form textarea{
   border: 1px solid #024e76;
@@ -308,8 +334,10 @@ footer a{
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  border-radius: 10px;
+
 }
-.contact-form button{
+.contact-form button:hover{
   width: 100%;
   border: none;
   background-color:#fce138;
@@ -317,8 +345,7 @@ footer a{
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
-
-
+  border-radius: 10px;
 }
 
 .contact-info a {
@@ -349,8 +376,34 @@ footer a{
   font-style: italic;
   font-size: 55px;
   color:#fce138;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .flex-row {
   display: flex;
+}
+@media screen and (max-width:980){
+position: sticky;  
+}
+
+/* update existing rule with this declaration */
+.form-input {
+  background-color: rgba(255,255,255, 0.75);
+}
+
+/* create a new rule for focus state */
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+}
+
+.contact-form input, .contact-form textarea {
+
+  /* add a transparent background here */
+}
+
+/* create a new css rule for focus state */
+.contact-form input:focus, .contact-form textarea:focus {
+
 }
